@@ -1,0 +1,12 @@
+{
+  "name": "tea-for-alexa",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Michael Maysonet",
+  "license": "MIT",
+  "dependencies": {
+    "alexa-sdk": "^1.0.24",
+    "axios": "^0.18.1",
+    "moment": "^2.20.1"
+  }
+}
