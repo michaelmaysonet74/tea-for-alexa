@@ -1,9 +1,4 @@
-class Platform {
-    constructor(id, name, destination) {
-        this.id = id;
-        this.name = name;
-        this.destination = destination;
-    }
-}
+const Platform = ({ id, name, destination }) =>
+    ({ id, name, destination });
 
 module.exports = Platform;

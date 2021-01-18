@@ -9,10 +9,9 @@ const {
 } = require('../../mbta-api/controllers/predictions-controller');
 
 const allNearestTrainsHandler = {
-    'AllNearestTrainsIntent': function() {
-        getAllNearestTrainsPredictions().then((res) => {
-            this.emit(':tell', `${res} ${randomConcludingExp()}`);
-        });
+    'AllNearestTrainsIntent': async function () {
+        const res = await getAllNearestTrainsPredictions()
+        this.emit(':tell', `${res} ${randomConcludingExp()}`);
     },
 };
 

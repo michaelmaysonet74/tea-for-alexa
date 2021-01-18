@@ -3,24 +3,19 @@ const axios = require('axios');
 const getStops = async (station = '') => {
     const url = 'https://api-v3.mbta.com/stops';
 
-    try {
-        let {
-            data: {
-                data: stops
-            }
-        } = await axios.get(url);
-
-        if (station !== '') {
-            return stops.filter(
-                stop => stop.attributes.name.includes(station)
-            );
+    const {
+        data: {
+            data: stops
         }
+    } = await axios.get(url);
 
-        return stops;
+    if (station !== '') {
+        return stops.filter(
+            stop => stop.attributes.name.includes(station)
+        );
     }
-    catch (e) {
-        throw e;
-    }
+
+    return stops;
 };
 
 module.exports = {
